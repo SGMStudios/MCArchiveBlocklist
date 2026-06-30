@@ -1,0 +1,8 @@
+[Unit]
+Description=Apply the MCArchive scanner blocklist to fail2ban
+After=fail2ban.service
+Requires=fail2ban.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/mcarchive-blocklist-update.sh
